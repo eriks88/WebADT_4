@@ -1,0 +1,42 @@
+body {
+    font-family: 'Liberation Sans', Arial, sans-serif;
+}
+
+.unbolt {
+    font-size: x-large;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Liberation Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.border_clear {
+    padding: 15px; 
+    border-radius: 9px; 
+    width: 80%; 
+    margin:auto;
+}
+
+.border {
+    border: 2px solid;
+    padding: 15px; 
+    border-radius: 9px; 
+    width: 80%; 
+    margin:auto;    
+ }
+
+ /*при навидении*/
+.button:hover {
+    color:red;
+    text-decoration: underline;
+    background-color: black;
+    text-decoration-color: aqua;
+    transform: scale(1.3)
+
+}
