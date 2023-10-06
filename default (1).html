@@ -66,6 +66,29 @@
 	});
 
 
+  <!--  функция zoom in - zoom out+ анимация-->
+  $(document).ready(function(){  
+        $(".zoom_in").click(function(){  
+            $("#myImage").animate({  
+                
+                opacity: '0.5',  
+                width: '60%'  
+            });  
+        });  
+    }); 
+
+
+  $(document).ready(function(){  
+        $(".zoom_out").click(function(){  
+            $("#myImage").animate({  
+                
+                opacity: '1',  
+                width: '40%'  
+            });  
+        });  
+    }); 
+
+
 
 
  </script>
@@ -119,6 +142,9 @@
       
         <button class = "hide">Hide</button>
         <button class = "show">Show</button>
+        <button class = "zoom_in">Zoom In</button>
+        <button class = "zoom_out">Zoom Out</button>
+  
   
       </div>
   
