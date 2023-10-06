@@ -88,7 +88,12 @@
         });  
     }); 
 
-
+    <!-- заменить картинку-->
+    $(document).ready(function(){  
+	    $(".change").click(function () {
+	        $("#myImage").attr("src", "https://png.pngtree.com/png-vector/20230414/ourmid/pngtree-gold-star-clipart-vector-png-image_6705600.png");
+	    });
+	});
 
 
  </script>
@@ -144,6 +149,7 @@
         <button class = "show">Show</button>
         <button class = "zoom_in">Zoom In</button>
         <button class = "zoom_out">Zoom Out</button>
+        <button class = "change">Change</button>
   
   
       </div>
