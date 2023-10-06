@@ -24,6 +24,16 @@
   <link rel="stylesheet" href="css/class.css">
   <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
+  <style>
+
+    .blink {
+        animation: blink 2s infinite; /* Параметры анимации */
+        }
+        @keyframes blink {
+        from { opacity: 1; /* Непрозрачный текст */ }
+        to { opacity: 0; /* Прозрачный текст */ }
+        }
+       </style>
 
   <script type = "text/javascript">
     <!--
@@ -41,7 +51,7 @@
        window.onload = init;
     //-->
 
-       <!--  функция show - hide + анимация-->
+      // функция show - hide + анимация-->
     $( document ).ready(function(){
 	  $( ".hide" ).click(function(){ // задаем функцию при нажатиии на элемент с классом hide
 	    $( "#myImage" ).hide( { // скрывыаем элементы <p> в документе
@@ -66,7 +76,7 @@
 	});
 
 
-  <!--  функция zoom in - zoom out+ анимация-->
+//  функция zoom in - zoom out+ анимация-->
   $(document).ready(function(){  
         $(".zoom_in").click(function(){  
             $("#myImage").animate({  
@@ -88,10 +98,12 @@
         });  
     }); 
 
-    <!-- заменить картинку-->
-    $(document).ready(function(){  
+    // заменить картинку-->
+    
+     $(document).ready(function(){  
 	    $(".change").click(function () {
-	        $("#myImage").attr("src", "https://png.pngtree.com/png-vector/20230414/ourmid/pngtree-gold-star-clipart-vector-png-image_6705600.png");
+        var star =  $("#myImage").attr("src", "https://png.pngtree.com/png-vector/20230414/ourmid/pngtree-gold-star-clipart-vector-png-image_6705600.png");
+        $(star).addClass("blink");
 	    });
 	});
 
@@ -166,7 +178,13 @@
     Before we go any further, a quick public service announcement is in order: most web designers would say that if you're new to CSS, you're better off avoiding Sass (or any preprocessors, extensions or frameworks) while you're still learning. While it's true they offer many advantages in speed and efficiency, it's important that you really get to grips with the basics of CSS. Make sure you learn the core concepts before you start exploring shortcuts and confusing things.
     </div> 
     <p>
-     <br>
+     <br>  //заменить картинку 
+     $(document).ready(function(){  
+       $(".change").click(function () {
+         var star =  $("#myImage").attr("src", "https://png.pngtree.com/png-vector/20230414/ourmid/pngtree-gold-star-clipart-vector-png-image_6705600.png");
+         $(star).addClass("blink");
+       });
+   });
     <div class="border" style="background-color: #fde4cf;">
     <h2>What is Sass?</h2>
     <P>
