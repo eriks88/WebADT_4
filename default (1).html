@@ -39,6 +39,34 @@
        
        window.onload = init;
     //-->
+
+       <!--  функция show - hide + анимация-->
+    $( document ).ready(function(){
+	  $( ".hide" ).click(function(){ // задаем функцию при нажатиии на элемент с классом hide
+	    $( "#myImage" ).hide( { // скрывыаем элементы <p> в документе
+	      duration: 800, // продолжительность анимации
+	      easing: "linear", // скорость анимации
+	      complete: function(){ // callback
+	        $(".status").text("Элементы исчезли");
+	      },
+	      queue: false // не ставим в очередь
+	    });
+	  });
+	  $( ".show" ).click(function(){ // задаем функцию при нажатиии на элемент с классом show
+	    $( "#myImage" ).show( { // отображаем элементы <p> в документе
+	      duration: 800, // продолжительность анимации
+	      easing: "linear", // скорость анимации
+	      complete: function(){ // callback
+	        $(".status").text("Элементы появились");
+	      },
+	      queue: false // не ставим в очередь
+	    });
+	  });
+	});
+
+
+
+
  </script>
 
 </head>
@@ -71,16 +99,28 @@
 
 
 
-     <!--  кнопка меняющая цвет и почта-->
-    <div class="border_clear">
-     <form action="handler.php">
-      <p>  <button type="submit" class="button">Submit</button></p>
-      <label for="email">Enter your email:</label>
+     <!--  кнопка меняющая цвет и почта, show и hide-->
+     <div class="border_clear">
 
-      <input type="email"/>
+      <form action="handler.php">
+  
+        <label for="email">Enter your email:</label>
+  
+        <input type="email"/>
+        
+  
+        <p>  <button type="submit" class="button">Submit</button>
+         
+        
+       
+       
+        </form>
       
-      </form>
-     </div>
+        <button class = "hide">Hide</button>
+        <button class = "show">Show</button>
+  
+      </div>
+  
 
       <p>
       <br>
