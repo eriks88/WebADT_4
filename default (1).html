@@ -23,6 +23,24 @@
   <link rel="stylesheet" href="css/styles.css?v=1.0">
   <link rel="stylesheet" href="css/class.css">
 
+
+  <script type = "text/javascript">
+    <!--
+       var imgObj = null;
+       
+       function init() {
+          imgObj = document.getElementById('myImage');
+          imgObj.style.position= 'relative'; 
+          imgObj.style.left = '0px'; 
+       }
+       function moveRight() {
+          imgObj.style.left = parseInt(imgObj.style.left) + 150 + 'px';
+       }
+       
+       window.onload = init;
+    //-->
+ </script>
+
 </head>
 
 <body>
@@ -46,6 +64,13 @@
       <br>
     </div>
 
+   <!--  кнопка убегающая -->
+    <div class="">
+      <button class="mobile-button" onclick = "moveRight();" ><img id = "myImage" class=" " src = "images/subscribe.png" width="15%" alt="«button»" ></button>
+   </div>
+
+
+     <!--  кнопка меняющая цвет и почта-->
     <div class="border_clear">
 
     <form action="handler.php">
